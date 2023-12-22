@@ -1,38 +1,47 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700&display=swap');
+
+.Front-page {
+    width: 100%;
+    height: 100vh;
+    background: url(./images/p1.png);
+    background-size: cover;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.side-nav {
+    position: absolute;
+    right: 0;
+    height: 100%;
+    width: 15rem;
+    display: flex; 
+    align-items: center; 
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.side-nav-ul {
+    width: 100%;
+    height: 50%;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+}
+.side-nav-ul li {
+    font: 1.5rem 'Orbitron', sans-serif ;
+    color: black;
+    padding: 1.5rem 0 1.5rem 2rem;
+    margin-left: 15%;
+    background-color: rgb(209, 209, 209);
+    border-radius: 250px 0 0 250px;
+    transition: 0.5s;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.side-nav-ul li:hover {
+    background-color: #ffffff;
+    margin-left: 0;
+    transition: 0.5s;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.About-me {
+    background: url(./images/p2.jpg);
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
 }
