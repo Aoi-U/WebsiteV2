@@ -1,18 +1,9 @@
-const contents = [
-  "About Me",
-  "Education",
-  "My Life",
-  "Projects",
-]
-
-const SideNav = () => {
+const SideNav = (props) => {
   return (
-    <ul className="side-nav-ul">
-      {contents.map((content) => 
-        <li>{content}</li>
-      )}
-    </ul>
-  )
-}
+    <li>
+      <a href={props.page}>{props.name}</a>
+    </li>
+  );
+};
 
 export default SideNav;
