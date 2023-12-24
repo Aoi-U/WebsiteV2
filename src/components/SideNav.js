@@ -1,9 +1,5 @@
 const SideNav = (props) => {
-  return (
-    <li>
-      <a href={props.page}>{props.name}</a>
-    </li>
-  );
+  return <a href={props.page}>{props.name}</a>;
 };
 
 export default SideNav;

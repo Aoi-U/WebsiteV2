@@ -6,14 +6,14 @@ function App() {
   return (
     <div className="App">
       <div className="App-header"></div>
-      <div className="side-nav">
-        <ul className="side-nav-ul">
+      <div className="side-nav-container">
+        <div className="side-nav">
           <SideNav page="#Home-page" name="Home" />
           <SideNav page="#About-me-page" name="About Me" />
           <SideNav page="#Education-page" name="Education" />
           <SideNav page="#My-life-page" name="My Life" />
           <SideNav page="#Projects-page" name="Projects" />
-        </ul>
+        </div>
       </div>
       <section className="Page" id="Home-page">
         <div className="Home">
