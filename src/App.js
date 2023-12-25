@@ -1,6 +1,7 @@
 import "./App.css";
 import "./Reset.css";
-import SideNav from "./components/SideNav.js";
+import { SideNav } from "./components/SideNav.js";
+import { PageBase } from "./components/PageBase.js";
 
 function App() {
   return (
@@ -8,37 +9,32 @@ function App() {
       <div className="App-header"></div>
       <div className="side-nav-container">
         <div className="side-nav">
-          <SideNav page="#Home-page" name="Home" />
-          <SideNav page="#About-me-page" name="About Me" />
-          <SideNav page="#Education-page" name="Education" />
-          <SideNav page="#My-life-page" name="My Life" />
-          <SideNav page="#Projects-page" name="Projects" />
+          <SideNav page="#home-page" name="Home" />
+          <SideNav page="#about-me-page" name="About Me" />
+          <SideNav page="#education-page" name="Education" />
+          <SideNav page="#my-life-page" name="My Life" />
+          <SideNav page="#projects-page" name="Projects" />
         </div>
       </div>
-      <section className="Page" id="Home-page">
-        <div className="Home">
-          <h1 className="page-title">Home</h1>
-        </div>
+      <section className="page" id="home-page">
+        <img src={require('./images/p1.jpg')} alt='Page 1' className="page-img" />
+        <PageBase pageTitle='Home' />
       </section>
-      <section className="Page" id="About-me-page">
-        <div className="About-me">
-          <h1 className="page-title">About Me</h1>
-        </div>
+      <section className="page" id="about-me-page">
+        <img src={require('./images/p2.jpg')} alt='Page 2' className="page-img" />
+        <PageBase pageTitle='About Me' />
       </section>
-      <section className="Page" id="Education-page">
-        <div className="Education">
-          <h1 className="page-title">Education</h1>
-        </div>
+      <section className="page" id="education-page">
+        <img src={require('./images/p3.jpg')} alt='Page 3' className="page-img" />
+        <PageBase pageTitle='Education' />
       </section>
-      <section className="Page" id="My-life-page">
-        <div className="My-life">
-          <h1 class="page-title">My Life</h1>
-        </div>
+      <section className="page" id="my-life-page">
+        <img src={require('./images/p4.jpg')} alt='Page 4' className="page-img" />
+        <PageBase pageTitle='My Life' />
       </section>
-      <section className="Page" id="Projects-page">
-        <div className="Projects">
-          <h1 className="page-title">Projects</h1>
-        </div>
+      <section className="page" id="projects-page">
+        <img src={require('./images/p5.jpg')} alt='Page 5' className="page-img" />
+        <PageBase pageTitle='Projects' />
       </section>
     </div>
   );

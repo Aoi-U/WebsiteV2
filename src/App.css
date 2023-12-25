@@ -9,7 +9,7 @@ section {
   scroll-snap-align: center;
 }
 
-.Page {
+.page {
   width: 100%;
   height: 100vh;
 }
@@ -34,15 +34,15 @@ section {
 .side-nav a {
   font: 1.5rem "Orbitron", sans-serif;
   padding: 1.5rem 0 1.5rem 2rem;
-  margin-left: 15%;
   background-color: rgb(209, 209, 209);
   border-radius: 250px 0 0 250px;
+  transform: translateX(15%);
   transition: 0.5s;
 }
 
 .side-nav a:hover {
   background-color: #ffffff;
-  margin-left: 0;
+  transform: translateX(0);
   transition: 0.5s;
 }
 
@@ -53,33 +53,18 @@ section {
 
 .page-title {
   position: absolute;
-  font: 6rem "Orbitron", sans-serif;
+  font: 100px "Orbitron", sans-serif;
   color: white;
   margin-top: 3rem;
   margin-left: 3rem;
+  text-shadow: black 0 0 10px;
 }
 
-#Home-page {
-  background: url(./images/p1.jpg);
-  background-size: cover;
-}
-
-#About-me-page {
-  background: url(./images/p2.jpg);
-  background-size: cover;
-}
-
-#Education-page {
-  background: url(./images/p3.jpg);
-  background-size: cover;
-}
-
-#My-life-page {
-  background: url(./images/p4.jpg);
-  background-size: cover;
-}
-
-#Projects-page {
-  background: url(./images/p5.jpg);
-  background-size: cover;
+.page-img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: blur(2px);
+  z-index: -1;
 }
