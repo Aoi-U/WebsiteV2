@@ -1,8 +1,7 @@
-
-export const PageBase = (props) => {
+export default function PageBase(props) {
   return (
     <>
-      <h1 className="page-title">{props.pageTitle}</h1>
+      <h1 className="title">{props.title}</h1>
     </>
   );
 };
