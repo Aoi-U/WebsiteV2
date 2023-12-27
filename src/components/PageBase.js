@@ -4,4 +4,4 @@ export default function PageBase(props) {
       <h1 className="title">{props.title}</h1>
     </>
   );
-};
+}

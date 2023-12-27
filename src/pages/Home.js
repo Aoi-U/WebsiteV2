@@ -5,8 +5,8 @@ import image1 from "../images/p1.jpg";
 export default function Home() {
   return (
     <section className="page" id="Home">
-      <img src={image1} className="page-img" />
-      <PageBase pageTitle={"Home"} />
+      <img src={image1} className="page-img" alt="Page 1" />
+      <PageBase title={"Home"} />
     </section>
   );
 }

@@ -25,9 +25,9 @@ function App() {
     <div className="App">
       <div className="App-header"></div>
       <div className="side-nav-container">
-        <div className="side-nav">
+        <ul className="side-nav">
           {sectionList.map((section, index) => (
-            <a
+            <li
               key={index}
               onClick={() => {
                 const element = document.getElementById(section.type.name);
@@ -37,9 +37,9 @@ function App() {
               }}
             >
               {addSpaceBetweenCaps(section.type.name)}
-            </a>
+            </li>
           ))}
-        </div>
+        </ul>
       </div>
 
       {/* <button

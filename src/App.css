@@ -31,27 +31,28 @@ section {
   width: 100%;
 }
 
-.side-nav a {
+.side-nav li {
   font: 1.5rem "Orbitron", sans-serif;
   padding: 1.5rem 0 1.5rem 2rem;
   background-color: rgb(209, 209, 209);
   border-radius: 250px 0 0 250px;
   transform: translateX(15%);
   transition: 0.5s;
+  cursor: pointer;
 }
 
-.side-nav a:hover {
+.side-nav li:hover {
   background-color: #ffffff;
   transform: translateX(0);
   transition: 0.5s;
 }
 
-.side-nav a {
+.side-nav li {
   text-decoration: none;
   color: black;
 }
 
-.page-title {
+.title {
   position: absolute;
   font: 100px "Orbitron", sans-serif;
   color: white;
