@@ -18,7 +18,7 @@ section {
   position: fixed;
   right: 0;
   height: 100%;
-  width: 18rem;
+  width: 25%;
   align-items: center;
   display: flex;
 }
@@ -32,8 +32,8 @@ section {
 }
 
 .side-nav li {
-  font: 1.5rem "Orbitron", sans-serif;
-  padding: 1.5rem 0 1.5rem 2rem;
+  font: 2vw "Orbitron", sans-serif;
+  padding: 1.7vw 0 1.7vw 1.8vw;
   background-color: rgb(209, 209, 209);
   border-radius: 250px 0 0 250px;
   transform: translateX(15%);
@@ -54,10 +54,10 @@ section {
 
 .title {
   position: absolute;
-  font: 100px "Orbitron", sans-serif;
+  font: 7vw "Orbitron", sans-serif;
   color: white;
-  margin-top: 3rem;
-  margin-left: 3rem;
+  margin-top: 1.8vh;
+  margin-left: 2.7vw;
   text-shadow: black 0 0 10px;
 }
 
@@ -67,5 +67,12 @@ section {
   height: 100%;
   object-fit: cover;
   filter: blur(2px);
+  z-index: -1;
+}
+
+.front-img {
+  position: absolute;
+  border: 5px solid green;
+  height: 100%;
   z-index: -1;
 }

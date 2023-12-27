@@ -12,7 +12,6 @@ function App() {
     <Home />,
     <AboutMe />,
     <Education />,
-    <MyLife />,
     <Projects />,
   ]);
 
