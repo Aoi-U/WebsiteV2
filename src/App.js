@@ -51,7 +51,12 @@ function App() {
       </button> */}
 
       {sectionList.map(
-        (section) => section && <div ref={section.pageRef}>{section}</div>
+        (section, index) =>
+          section && (
+            <div ref={section.pageRef} key={index}>
+              {section}
+            </div>
+          )
       )}
     </div>
   );
