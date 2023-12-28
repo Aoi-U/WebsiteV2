@@ -12,6 +12,7 @@ section {
 .page {
   width: 100%;
   height: 100vh;
+  background: linear-gradient(to left, #000d1384, #00000000);
 }
 
 .side-nav-container {
@@ -32,10 +33,10 @@ section {
 }
 
 .side-nav li {
-  font: 2vw "Orbitron", sans-serif;
-  padding: 1.7vw 0 1.7vw 1.8vw;
+  font: 2rem "Orbitron", sans-serif;
+  padding: 1.5rem 0 1.5rem 2rem;
   background-color: rgb(209, 209, 209);
-  border-radius: 250px 0 0 250px;
+  border-radius: 25rem 0 0 25rem;
   transform: translateX(15%);
   transition: 0.5s;
   cursor: pointer;
@@ -54,11 +55,11 @@ section {
 
 .title {
   position: absolute;
-  font: 7vw "Orbitron", sans-serif;
+  font: 7rem "Orbitron", sans-serif;
   color: white;
-  margin-top: 1.8vh;
-  margin-left: 2.7vw;
-  text-shadow: black 0 0 10px;
+  margin-top: 2rem;
+  margin-left: 3rem;
+  text-shadow: black 0 0 0.8rem;
 }
 
 .page-img {
@@ -66,13 +67,42 @@ section {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  filter: blur(2px);
+  filter: blur(0.1rem);
   z-index: -1;
 }
 
-.front-img {
-  position: absolute;
+.tile-container {
   border: 5px solid green;
+  position: relative;
+  top: 55%;
+  left: 40%;
+  transform: translate(-50%, -50%);
+  width: 50%;
+  height: 32rem;
+  display: flex;
+}
+
+.tile{
+  width: 5rem;
   height: 100%;
-  z-index: -1;
+  background-color: white;
+  font: bold 1.5rem "Rajdhani", sans-serif;
+  position: relative;
+  overflow: hidden;
+  border-radius: 3rem;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.tile:hover {
+  width: 15rem;
+  transition: 0.5s;
+}
+
+.tile h1 {
+  position: absolute;
+  top: 1rem;
+  left: 0.5rem;
+  color: black;
+  transition: 0.5s;
 }
