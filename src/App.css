@@ -36,7 +36,7 @@ section {
   font: 2rem "Orbitron", sans-serif;
   padding: 1.5rem 0 1.5rem 2rem;
   background-color: rgb(209, 209, 209);
-  border-radius: 25rem 0 0 25rem;
+  border-radius: 3rem 0 0 3rem;
   transform: translateX(15%);
   transition: 0.5s;
   cursor: pointer;
@@ -72,37 +72,59 @@ section {
 }
 
 .tile-container {
-  border: 5px solid green;
   position: relative;
   top: 55%;
   left: 40%;
   transform: translate(-50%, -50%);
-  width: 50%;
-  height: 32rem;
+  width: 60%;
+  height: 60%;
   display: flex;
 }
 
+.tile input {
+  display: none;
+}
+
 .tile {
-  width: 5rem;
+  width: 6rem;
   height: 100%;
-  background-color: white;
-  font: bold 1.5rem "Rajdhani", sans-serif;
   position: relative;
   overflow: hidden;
-  border-radius: 3rem;
-  cursor: pointer;
-  transition: 0.5s;
+  white-space: nowrap;
+  border-radius: 2rem;
+  transition: 0.7s;
+  background-color: rgb(209, 209, 209);
+  display: flex;
+  flex-direction: column;
 }
 
-.tile:hover {
-  width: 15rem;
-  transition: 0.5s;
+#tile0 {
+  flex-grow: 1;
 }
 
-.tile h1 {
-  position: absolute;
-  top: 1rem;
-  left: 0.5rem;
+.tile h2 {
+  font: bold 2rem "Rajdhani", sans-serif;
+  margin: 1rem;
   color: black;
+}
+
+.tile button {
+  font: 1.5rem "Rajdhani", sans-serif;
+  margin-left: 2rem;
+  color: black;
+  border-radius: 2rem 0 0 2rem;
+  padding: 0.5rem 0 0.5rem 1rem;
+  width: 100%;
+  text-align: left;
+  border: none;
+  background-color: rgb(209, 209, 209);
   transition: 0.5s;
+}
+
+.tile button:hover {
+  background: linear-gradient(to left, rgb(209, 209, 209), white);
+  transform: scale(1.01) translateZ(0);
+  backface-visibility: hidden;
+  -webkit-font-smoothing: subpixel-antialiased;
+  transition: 0.3s;
 }

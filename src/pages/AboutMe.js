@@ -8,18 +8,37 @@ export default function AboutMe() {
   const [tileList, setTileList] = useState([
     <Tile
       title="Education"
-      subTitles="University of Calgary"
+      subTitle={["University of Calgary", "Calgary Hoshuko Japanese School"]}
       desc="Majoring in Computer Science. Going into my 3rd year of university next fall!"
     />,
     <Tile
       title="Experience"
-      subTitles="Calgary Hoshuko Japanese School"
+      subTitle={["Chicken On The Way", "Calgary Hoshuko Japanese School"]}
       desc="Attended Calgary Hoshuko from grade 1 to 6. Native and fluent in speaking Japanese"
+    />,
+    <Tile
+      title="Skills"
+      subTitle={["Programming Languages"]}
+      desc="C, C++, Java, Python, JavaScript, HTML, CSS"
+    />,
+    <Tile
+      title="Hobbies"
+      subTitle={["Soccer", "Video Games", "Anime"]}
+      desc="I play soccer in my free time. I also enjoy playing video games and watching anime."
     />,
   ]);
 
-  const expand = (index) => {
-    console.log(index);
+  const [selectedTile, setSelectedTile] = useState("0");
+
+  const changeTile = (e) => {
+    const index = e.target.value;
+    setSelectedTile(index);
+
+    const currTile = document.getElementById("tile" + index);
+    const prevTile = document.getElementById("tile" + selectedTile);
+
+    currTile.style.flexGrow = "1";
+    prevTile.style.flexGrow = "0";
   };
 
   return (
@@ -28,9 +47,15 @@ export default function AboutMe() {
       <PageBase title={"About Me"} />
       <div className="tile-container">
         {tileList.map((tile, index) => (
-          <span className="tile" key={index} onClick={expand}>
+          <label className="tile" key={index} id={"tile" + index}>
+            <input
+              type="radio"
+              value={index}
+              checked={selectedTile === index.toString()}
+              onChange={changeTile}
+            />
             {tile}
-          </span>
+          </label>
         ))}
       </div>
     </section>
