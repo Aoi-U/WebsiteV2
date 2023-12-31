@@ -4,7 +4,6 @@ import { useState } from "react";
 import Home from "./pages/Home.js";
 import AboutMe from "./pages/AboutMe.js";
 import Education from "./pages/Education.js";
-import MyLife from "./pages/MyLife.js";
 import Projects from "./pages/Projects.js";
 
 function App() {

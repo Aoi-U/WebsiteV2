@@ -81,50 +81,40 @@ section {
   display: flex;
 }
 
-.tile input {
-  display: none;
-}
-
 .tile {
   width: 6rem;
   height: 100%;
+  margin: 0.1rem;
   position: relative;
   overflow: hidden;
   white-space: nowrap;
-  border-radius: 2rem;
   transition: 0.7s;
   background-color: rgb(209, 209, 209);
   display: flex;
   flex-direction: column;
+  border-radius: 0.5rem;
+}
+
+.tile:hover {
+  cursor: pointer;
 }
 
 #tile0 {
-  flex-grow: 1;
+  border-top-left-radius: 1rem;
+  border-bottom-left-radius: 1rem;
+  background: url("./images/UofC.jpg") center no-repeat;
+}
+
+#tile3 {
+  border-top-right-radius: 1rem;
+  border-bottom-right-radius: 1rem;
 }
 
 .tile h2 {
   font: bold 2rem "Rajdhani", sans-serif;
   margin: 1rem;
+  padding-left: 1rem;
   color: black;
-}
-
-.tile button {
-  font: 1.5rem "Rajdhani", sans-serif;
-  margin-left: 2rem;
-  color: black;
-  border-radius: 2rem 0 0 2rem;
-  padding: 0.5rem 0 0.5rem 1rem;
-  width: 100%;
-  text-align: left;
-  border: none;
-  background-color: rgb(209, 209, 209);
-  transition: 0.5s;
-}
-
-.tile button:hover {
-  background: linear-gradient(to left, rgb(209, 209, 209), white);
-  transform: scale(1.01) translateZ(0);
-  backface-visibility: hidden;
-  -webkit-font-smoothing: subpixel-antialiased;
-  transition: 0.3s;
+  border-radius: 1rem;
+  background: white;
 }
