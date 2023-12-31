@@ -117,4 +117,29 @@ section {
   color: black;
   border-radius: 1rem;
   background: white;
+  border-bottom: 2px solid black;
+}
+
+.tile-content {
+}
+
+.tile h3 {
+  font: 1.5rem "Rajdhani", sans-serif;
+  margin: 1rem 1rem 0 1rem;
+  padding-left: 1rem;
+  color: black;
+  border-radius: 1rem 1rem 0 1rem;
+  background: white;
+  border-bottom: 2px solid black;
+}
+
+.tile p {
+  font: 1.5rem "Rajdhani", sans-serif;
+  margin: 0 1rem 1rem 3rem;
+  padding-left: 1rem;
+  color: black;
+  border-bottom-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+  border-bottom: 2px solid black;
+  background: white;
 }
