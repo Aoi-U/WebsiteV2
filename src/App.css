@@ -102,7 +102,7 @@ section {
 #tile0 {
   border-top-left-radius: 1rem;
   border-bottom-left-radius: 1rem;
-  background: url("./images/UofC.jpg") center no-repeat;
+  background: url("./images/EducationTile.jpg") center no-repeat;
 }
 
 #tile3 {
@@ -110,17 +110,14 @@ section {
   border-bottom-right-radius: 1rem;
 }
 
-.tile h2 {
+.tile-title {
   font: bold 2rem "Rajdhani", sans-serif;
   margin: 1rem;
-  padding-left: 1rem;
+  padding: 0.5rem 0 0.5rem 1rem;
   color: black;
   border-radius: 1rem;
-  background: white;
   border-bottom: 2px solid black;
-}
-
-.tile-content {
+  background: white;
 }
 
 .tile h3 {
@@ -129,8 +126,8 @@ section {
   padding-left: 1rem;
   color: black;
   border-radius: 1rem 1rem 0 1rem;
-  background: white;
   border-bottom: 2px solid black;
+  background: white;
 }
 
 .tile p {

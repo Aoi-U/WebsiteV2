@@ -48,7 +48,7 @@ export default function Tiles(props) {
       content: [
         {
           sub: "Programming languages",
-          desc: "C, C++, Java, Python, JavaScript, HTML, CSS, React",
+          desc: "Java, Python, JavaScript, HTML, CSS, React",
         },
         {
           sub: "Thinking",
@@ -77,15 +77,8 @@ export default function Tiles(props) {
     },
   ]);
 
-  const expandStyle = {
-    flexGrow: "1",
-  };
-
-  const shrinkStyle = {
-    flexGrow: "0",
-  };
-
-  const changeTile = (activeTile) => {
+  const changeTile = (e, activeTile) => {
+    // e.preventDefault();
     setSelectedTile(
       selectedTile.map((tile, index) => {
         if (index == activeTile) {
@@ -98,23 +91,50 @@ export default function Tiles(props) {
     );
   };
 
+  const tileShrunk = {
+    transition: "0.7s",
+    transform: "rotate(-90deg)",
+    position: "absolute",
+  }
+
+  const tileExpanded = {
+    font: "bold 2rem 'Rajdhani', sans-serif",
+    margin: "1rem",
+    padding: "0.5rem 0 0.5rem 1rem",
+    color: "black",
+    borderRadius: "1rem",
+    borderBottom: "2px solid black",
+    background: "white",
+    transform: "rotate(0deg)",
+    transition: "0.7s",
+  }
+
   return (
     <div className="tile-container">
       {selectedTile.map((tile, index) => (
         <span
-          style={selectedTile[index].active ? expandStyle : shrinkStyle}
+          style={tile.active ? { flexGrow: "1" } : { flexGrow: "0" }}
           className="tile"
           id={"tile" + index}
           key={index}
-          onClick={() => changeTile(index)}
+          onClick={(e) => changeTile(e, index)}
         >
-          <h2>{tile.title}</h2>
-          {tile.content.map((content) => (
-            <div className="tile-content">
-              <h3>{content.sub}</h3>
-              <p>{content.desc}</p>
-            </div>
-          ))}
+          <div className="tile-content">
+            <h2 className="tile-title" style={tile.active ? tileExpanded : tileShrunk }>{tile.title}</h2>
+            {tile.content.map((content) => (
+              <div
+                className="tile-desc"
+                style={
+                  tile.active
+                    ? { opacity: "1", transition: "0.5s" }
+                    : { opacity: "0", transition: "0.5s" }
+                }
+              >
+                <h3>{content.sub}</h3>
+                <p>{content.desc}</p>
+              </div>
+            ))}
+          </div>
         </span>
       ))}
     </div>
